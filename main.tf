@@ -1,6 +1,6 @@
 
 provider "aws" {
-region = "us-east-1"
+region = "us-west-1"
 access_key = "AKIAWFIPS76WMKRACWPY"
 secret_key = "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"
 }
@@ -10,7 +10,7 @@ resource "aws_instance" "one" {
   instance_type   = "t2.micro"
   key_name        = "terraform"
   vpc_security_group_ids = [aws_security_group.five.id]
-  availability_zone = "us-east-1a"
+  availability_zone = "us-west-1a"
   user_data       = <<EOF
 #!/bin/bash
 sudo -i
@@ -29,7 +29,7 @@ resource "aws_instance" "two" {
   instance_type   = "t2.micro"
   key_name        = "terraform"
   vpc_security_group_ids = [aws_security_group.five.id]
-  availability_zone = "us-east-1b"
+  availability_zone = "us-west-1b"
   user_data       = <<EOF
 #!/bin/bash
 sudo -i
@@ -48,7 +48,7 @@ resource "aws_instance" "three" {
   instance_type   = "t2.micro"
   key_name        = "terraform"
   vpc_security_group_ids = [aws_security_group.five.id]
-  availability_zone = "us-east-1a"
+  availability_zone = "us-west-1a"
   tags = {
     Name = "app-server-1"
   }
@@ -59,7 +59,7 @@ resource "aws_instance" "four" {
   instance_type   = "t2.micro"
   key_name        = "terraform"
   vpc_security_group_ids = [aws_security_group.five.id]
-  availability_zone = "us-east-1b"
+  availability_zone = "us-west-1b"
   tags = {
     Name = "app-server-2"
   }
@@ -105,7 +105,7 @@ default = ["user1", "user2", "user3", "user4"]
 }
 
 resource "aws_ebs_volume" "eight" {
- availability_zone = "us-east-1a"
+ availability_zone = "us-west-1a"
   size = 40
   tags = {
     Name = "ebs-001"

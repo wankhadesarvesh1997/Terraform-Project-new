@@ -1,6 +1,6 @@
 resource "aws_elb" "bar" {
   name               = "akhi-terraform-elb"
-  availability_zones = ["us-east-1a", "us-east-1b"]
+  availability_zones = ["us-west-1a", "us-west-1b"]
 
   listener {
     instance_port     = 80

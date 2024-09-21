@@ -1,11 +1,9 @@
-
 provider "aws" {
-region = "us-west-1"
-
+region = "us-west-2"
 }
 
 resource "aws_instance" "one" {
-  ami             = "ami-0ebfd941bbafe70c6"
+  ami             = "ami-08d8ac128e0a1b91c"
   instance_type   = "t2.micro"
   key_name        = "terraform"
   vpc_security_group_ids = [aws_security_group.five.id]
@@ -24,7 +22,7 @@ EOF
 }
 
 resource "aws_instance" "two" {
-  ami             = "ami-0ebfd941bbafe70c6"
+  ami             = "ami-08d8ac128e0a1b91c"
   instance_type   = "t2.micro"
   key_name        = "terraform"
   vpc_security_group_ids = [aws_security_group.five.id]
@@ -43,7 +41,7 @@ EOF
 }
 
 resource "aws_instance" "three" {
-  ami             = "ami-0ebfd941bbafe70c6"
+  ami             = "ami-08d8ac128e0a1b91c"
   instance_type   = "t2.micro"
   key_name        = "terraform"
   vpc_security_group_ids = [aws_security_group.five.id]
@@ -54,7 +52,7 @@ resource "aws_instance" "three" {
 }
 
 resource "aws_instance" "four" {
-  ami             = "ami-0ebfd941bbafe70c6"
+  ami             = "ami-08d8ac128e0a1b91c"
   instance_type   = "t2.micro"
   key_name        = "terraform"
   vpc_security_group_ids = [aws_security_group.five.id]

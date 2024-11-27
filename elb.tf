@@ -1,6 +1,6 @@
 resource "aws_elb" "bar" {
-  name               = "raham-terraform-elb"
-  availability_zones = ["ap-southeast-1a", "ap-southeast-1b"]
+  name               = "akhi-terraform-elb"
+  availability_zones = ["us-west-1a", "us-west-1b"]
 
   listener {
     instance_port     = 80
@@ -21,7 +21,7 @@ resource "aws_elb" "bar" {
   cross_zone_load_balancing = true
   idle_timeout              = 400
   tags = {
-    Name = "raham-tf-elb"
+    Name = "akhila-tf-elb"
   }
 }
 
@@ -29,7 +29,7 @@ resource "aws_elb" "bar" {
   cluster_identifier      = "aurora-cluster-demo"
   engine                  = "aurora-mysql"
   engine_version          = "5.7.mysql_aurora.2.11.2"
-  availability_zones      = ["ap-southeast-1a", "ap-southeast-1b"]
+  availability_zones      = ["us-east-1a", "us-east-1b"]
   database_name           = "mydb"
   master_username         = "raham"
   master_password         = "Rahamshaik#444555"
@@ -39,7 +39,7 @@ resource "aws_elb" "bar" {
 
 /*resource "aws_instance" "one" {
   for_each = toset(["one", "two", "three"])
-  ami           = "ami-006be9ab6a140de6e"
+  ami           = "ami-0ebfd941bbafe70c6"
   instance_type = "t2.micro"
   tags = {
     Name = "instance-${each.key}"

@@ -1,6 +1,6 @@
 
 provider "aws" {
-region = "ap-southeast-1"
+region = "ap-south-1"
 }
 
 resource "aws_instance" "one" {
@@ -103,7 +103,7 @@ default = ["user1", "user2", "user3", "user4"]
 }
 
 resource "aws_ebs_volume" "eight" {
- availability_zone = "ap-southeast-1a"
+ availability_zone = "ap-south-1"
   size = 40
   tags = {
     Name = "ebs-001"

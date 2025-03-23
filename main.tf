@@ -4,7 +4,7 @@ provider "aws" {
 
 # Web Server 1 Instance
 resource "aws_instance" "one" {
-  ami               = "ami-00ae2c3d8c3a99b55"
+  ami               = "ami-0f65a9eac3c203b54"
   instance_type     = "t2.micro"
   key_name          = "devopsbysarvesh"
   vpc_security_group_ids = [aws_security_group.five.id]
@@ -25,7 +25,7 @@ resource "aws_instance" "one" {
 
 # Web Server 2 Instance
 resource "aws_instance" "two" {
-  ami               = "ami-00ae2c3d8c3a99b55"
+  ami               = "ami-0f65a9eac3c203b54"
   instance_type     = "t2.micro"
   key_name          = "devopsbysarvesh"
   vpc_security_group_ids = [aws_security_group.five.id]
@@ -46,7 +46,7 @@ resource "aws_instance" "two" {
 
 # App Server 1 Instance
 resource "aws_instance" "three" {
-  ami               = "ami-00ae2c3d8c3a99b55"
+  ami               = "ami-0f65a9eac3c203b54"
   instance_type     = "t2.micro"
   key_name          = "devopsbysarvesh"
   vpc_security_group_ids = [aws_security_group.five.id]
@@ -59,7 +59,7 @@ resource "aws_instance" "three" {
 
 # App Server 2 Instance
 resource "aws_instance" "four" {
-  ami               = "ami-00ae2c3d8c3a99b55"
+  ami               = "ami-0f65a9eac3c203b54"
   instance_type     = "t2.micro"
   key_name          = "devopsbysarvesh"
   vpc_security_group_ids = [aws_security_group.five.id]

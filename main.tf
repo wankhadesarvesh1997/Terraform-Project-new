@@ -116,7 +116,7 @@ variable "user_names" {
 
 # EBS Volume
 resource "aws_ebs_volume" "eight" {
-  availability_zone = "ap-southeast-1a"
+  availability_zone = "eu-north-1a"
   size              = 40
   
   tags = {
